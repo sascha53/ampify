@@ -56,7 +56,7 @@ module.exports = function(html, options) {
   }
 
   /* img dimensions */
-  $('img:not(width):not(height)').each(function() {
+  $('img:not([width]):not([height])').each(function() {
     var src = $(this).attr('src');
     if (src.indexOf('//') === -1) {
       var image = options.cwd + '/' + $(this).attr('src');
